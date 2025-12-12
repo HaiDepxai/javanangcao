@@ -1,0 +1,139 @@
+/* Toàn bộ trang */
+body {
+    background-color: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container chính của form */
+.form-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+.form-title {
+    text-align: center;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 30px;
+}
+
+/* Ảnh thuốc */
+.form-container img.thuoc-img {
+    max-width: 180px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+.form-container img.thuoc-img:hover {
+    transform: scale(1.05);
+}
+
+/* Nhãn trong form */
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+/* Tổng tiền */
+#totalAmount {
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: #eafaf1;
+    border-radius: 8px;
+    text-align: right;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Nút */
+.btn-block {
+    font-size: 1.05em;
+}
+
+/* Không cho textarea resize */
+textarea.form-control {
+    resize: none;
+}
+
+/* Ảnh ngân hàng */
+img.payment-option {
+    width: 65px;
+    height: 40px;
+    object-fit: contain;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: 0.3s;
+    padding: 4px;
+}
+
+/* Gói label chọn thanh toán */
+.payment-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.payment-label input[type="radio"] {
+    display: none;
+}
+
+/* Hover hiệu ứng */
+.payment-label:hover img.payment-option {
+    border-color: #28a745;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.4);
+}
+
+/* Khi radio được chọn */
+.payment-label input[type="radio"]:checked + img.payment-option {
+    border-color: #28a745;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.8);
+    transform: scale(1.05);
+}
+
+/* Responsive cho mobile */
+@media (max-width: 576px) {
+    .form-container {
+        padding: 25px;
+    }
+
+    .payment-label {
+        flex: 0 0 45%;
+        margin: 8px;
+    }
+
+    .form-title {
+        font-size: 1.3em;
+    }
+
+    #totalAmount {
+        font-size: 1em;
+    }
+
+    .btn-block {
+        font-size: 1em;
+    }
+
+    .form-container img.thuoc-img {
+        max-width: 140px;
+    }
+}
+.quantity-control .btn {
+    width: 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 5px 0;
+}
+.quantity-control input {
+    max-width: 80px;
+}
